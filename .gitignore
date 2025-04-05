@@ -1,28 +1,29 @@
-# dev
-.yarn/
-!.yarn/releases
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
-.idea/workspace.xml
-.idea/usage.statistics.xml
-.idea/shelf
+# Ignore node_modules — will be installed fresh in the container
+node_modules
+npm-debug.log
+yarn.lock
+.pnpm-debug.log
 
-# deps
-node_modules/
-
-# env
+# Ignore local environment files
 .env
-.env.production
+.env.*
 
-# logs
-logs/
+# Ignore build output
+dist
+build
+
+# Ignore TypeScript cache & editor configs
+*.tsbuildinfo
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.vscode
+.idea
 
-# misc
+# Ignore test files and coverage
+__tests__
+coverage
+*.test.ts
+*.spec.ts
+
+# Mac/Linux/Windows system files
 .DS_Store
+Thumbs.db
